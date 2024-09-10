@@ -15,7 +15,7 @@ def main_planner(guests: int) -> None:
         + str(
             cost(tea_count=tea_bags(people=guests), treat_count=treats(people=guests))
         )
-    )  # prints the cost using tea_bags and treats as the arguments for tea_count and treat_count
+    )  # prints the cost using tea_bags and treats as the arguments
     return None
 
 
