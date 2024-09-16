@@ -14,7 +14,7 @@ def input_word() -> str:
         return word
 
 
-# input_word()
+input_word()
 
 
 def input_letter() -> str:
@@ -30,23 +30,11 @@ def input_letter() -> str:
         return letter
 
 
-# input_letter()
+input_letter()
 
 
-def contains_char(
-    input_word: str, input_letter: str
-) -> None:  # takes input_word and input_letter as arguments
-    if input_letter == input_word[1]:
-        print(input_letter + "found at index 1")
-    if input_letter == input_word[2]:
-        print(input_letter + "found at index 2")
-    if input_letter == input_word[3]:
-        print(input_letter + "found at index 3")
-    if input_letter == input_word[4]:
-        print(input_letter + "found at index 4")
-    if input_letter == input_word[5]:
-        print(input_letter + "found at index 5")
-    return None
+def contains_char(word = input_word(): str, 
+
+# unsure how to call the function
 
 
-# i dont think i did the last part correctly but i am not finished
