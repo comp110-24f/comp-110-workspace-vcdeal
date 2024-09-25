@@ -1,4 +1,4 @@
-"""Practice with loops"""
+"""Practice with while loops"""
 
 
 def characters(msg: str) -> None:
