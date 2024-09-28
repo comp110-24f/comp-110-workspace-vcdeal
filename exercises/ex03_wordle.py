@@ -5,10 +5,10 @@ __author__: str = "730745012"
 
 def input_guess(length: int) -> str:
     """Asks user to input a word"""
-    word: str = input(f"Enter a {length} letter word.")  # asks user for a word
+    word: str = input(f"Enter a {length} character word.")  # asks user for a word
     while len(word) != length:  # if the word length does equal input length
         word = input(
-            (f"Error: That wasn't {length} letters. Try again:")
+            (f"Error: That wasn't {length} chars! Try again:")
         )  # asks user to try again
     return word
 
