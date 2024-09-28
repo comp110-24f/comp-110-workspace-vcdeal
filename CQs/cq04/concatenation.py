@@ -1,4 +1,4 @@
-"""Practice with importing concatenations."""
+"""Practice with importing/concatenations."""
 
 __author__: str = "730745012"
 
@@ -13,4 +13,6 @@ word1: str = "happy"
 word2: str = "tuesday"
 
 if __name__ == "__main__":
-    print(concat(input1=word1, input2=word2))
+    print(
+        concat(input1=word1, input2=word2)
+    )  # only prints if the function is run, not just if the function is called
