@@ -32,13 +32,15 @@ def max(input: list[int]) -> int:
 def is_equal(input1: list[int], input2: list[int]) -> bool:
     """Sees if two lists have equal values"""
     idx: int = 0
+    if len(input1) != len(input2):  # if the lengths of the list aren't equal
+        return False  # return False
     while idx < len(input1):
         if (
             input1[idx] == input2[idx]
         ):  # if value of input 1 is equal to value of input 2
             idx += 1
         else:
-            return False
+            return False  # returns False if the values aren't equal
     return True
 
 
@@ -46,5 +48,5 @@ def extend(input1: list[int], input2: list[int]) -> None:
     """Appends a list by adding a second list's values"""
     idx: int = 0
     while idx < len(input2):
-        input1.append(input2[idx])
+        input1.append(input2[idx])  # adds value of list 2 to list 1
         idx += 1
