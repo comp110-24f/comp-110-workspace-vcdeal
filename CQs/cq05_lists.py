@@ -3,16 +3,16 @@
 __author__ = "730745012"
 
 
-def manual_append(list: list, int: int) -> None:
+def manual_append(list1: list[int], int: int) -> None:
     """Mutates input by appending int to the list."""
-    list.append(int)  # appends int to list
+    list1.append(int)  # appends int to list
     return None
 
 
-def double(list: list) -> None:
+def double(list2: list[int]) -> None:
     idx: int = 0
-    while idx < len(list):
-        list[idx] = list[idx] * 2  # multiplies the value at given index by 2
+    while idx < len(list2):
+        list2[idx] = list2[idx] * 2  # multiplies the value at given index by 2
         idx += 1
 
 
