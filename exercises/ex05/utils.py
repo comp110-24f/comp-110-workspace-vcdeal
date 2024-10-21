@@ -32,7 +32,7 @@ def sub(list_input: list[int], start_idx: int, end_idx: int) -> list[int]:
 
 def add_at_index(list_input: list[int], element: int, idx: int) -> None:
     """Modifies input list to place element at given input"""
-    if idx > len(list_input):
+    if idx > len(list_input) or idx < 0:
         raise IndexError("Index is out of bounds for the input list")
     list_input.append(0)  # creates spaceholder at end of list to be replaced later
     for x in range(
