@@ -70,5 +70,5 @@ def test_add_at_index_raises_indexerror():
         element = 3
         idx = 4
         add_at_index(list1, element, idx)
-        # an IndexError is raised for the case when the add_at_index is given an <index_to_insert_num>
-        # that is greater than the length of our <list_object>
+        # an IndexError is raised for the case when the add_at_index is given an
+        # <index_to_insert_num> that is greater than the length of our <list_object>
