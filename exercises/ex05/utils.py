@@ -36,11 +36,9 @@ def add_at_index(list_input: list[int], element: int, idx: int) -> None:
         raise IndexError("Index is out of bounds for the input list")
     list_input.append(0)  # creates spaceholder at end of list to be replaced later
     for x in range(
-        idx, len(list_input) - 1, -1
-    ):  # range from given index to end of list (ignoring placeholder)
+        len(list_input) - 1, idx, -1
+    ):  # range from end of list (ignoring placeholder) to given index, goes backward
         list_input[x] = list_input[
             x - 1
         ]  # shifts each value over one index to the right
-
-
-# for in loop is not working, unsure why not
+    list_input[idx] = element  # adds element to list
