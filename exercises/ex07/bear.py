@@ -12,3 +12,7 @@ class Bear:
 
     def one_day(self):
         return None
+
+
+# hgello
+print("hello")
