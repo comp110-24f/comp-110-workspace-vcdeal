@@ -7,3 +7,5 @@ class Bear:
     
     def one_day(self):
         return None
+
+#some code comment to test fix"
