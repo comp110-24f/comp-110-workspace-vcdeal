@@ -9,4 +9,3 @@ class Bear:
         return None
 
 #some code comment to test fix"
-print("hello")
