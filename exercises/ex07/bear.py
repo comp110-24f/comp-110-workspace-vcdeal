@@ -2,6 +2,7 @@
 
 
 class Bear:
+
     age: int
     hunger_score: int
 
@@ -12,7 +13,3 @@ class Bear:
 
     def one_day(self):
         return None
-
-
-# hgello
-print("hello")
