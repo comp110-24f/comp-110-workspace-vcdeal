@@ -21,7 +21,25 @@ class River:
         for _ in range(0, num_bears):
             self.bears.append(Bear())
 
+    def remove_fish(self, amount: int):
+        """Removes a certain amount of fish from river"""
+        for _ in range(amount):  # iterates over all of fish up to amount
+            self.fish.pop(0)  # pops first fish in given list
+
     def check_ages(self):
+
+        bear_survivors: list[Bear] = []  # creates new empty list
+        for x in self.bears:  # iterates over self.bears
+            if x.age < 5:  # if a bear is younger than 5
+                bear_survivors.append(x)  # they are a survivor
+
+        fish_survivors: list[Fish] = []  # new empty list
+        for x in self.fish:
+            if x.age < 3:
+                fish_survivors.append(x)  # appends survivors
+
+        self.bears = bear_survivors  # updates lists to just include survivors
+        self.fish = fish_survivors
         return None
 
     def bears_eating(self):
@@ -38,8 +56,8 @@ class River:
 
     def view_river(self):
         print(f"~~~ Day {self.day} ~~~")
-        print(f"Fish population: {self.fish}")
-        print(f"Bear population: {self.bears}")
+        print(f"Fish population: {len(self.fish)}")  # prints length of fish list
+        print(f"Bear population: {len(self.bears)}")  # prints length of bear list
         return None
 
     def one_river_day(self):
@@ -64,3 +82,13 @@ class River:
         self.repopulate_bears()
         # Visualize River
         self.view_river()
+
+    def one_river_week(self):
+        """Simulates one week of life in the river"""
+        River.one_river_day(self)
+        River.one_river_day(self)
+        River.one_river_day(self)
+        River.one_river_day(self)
+        River.one_river_day(self)
+        River.one_river_day(self)
+        River.one_river_day(self)  # runs function 7 times
