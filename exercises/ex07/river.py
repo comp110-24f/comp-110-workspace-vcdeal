@@ -29,29 +29,47 @@ class River:
     def check_ages(self):
 
         bear_survivors: list[Bear] = []  # creates new empty list
-        for x in self.bears:  # iterates over self.bears
-            if x.age < 5:  # if a bear is younger than 5
-                bear_survivors.append(x)  # they are a survivor
+        for bear in self.bears:  # iterates over self.bears
+            if bear.age < 5:  # if a bear is younger than 5
+                bear_survivors.append(bear)  # they are a survivor
 
         fish_survivors: list[Fish] = []  # new empty list
-        for x in self.fish:
-            if x.age < 3:
-                fish_survivors.append(x)  # appends survivors
+        for fish in self.fish:
+            if fish.age < 3:
+                fish_survivors.append(fish)  # appends survivors
 
         self.bears = bear_survivors  # updates lists to just include survivors
         self.fish = fish_survivors
         return None
 
     def bears_eating(self):
+        for bear in self.bears:  # iterates over bears
+            if len(self.fish) >= 5:  # if there are more than 5 fish
+                River.remove_fish(self, 3)  # remove three fish
+                Bear.eat(
+                    bear, 3
+                )  # bear eats three fish, idk if self = bear is correct?
         return None
 
     def check_hunger(self):
+
+        alive_bears: list[Bear] = []  # creates new empty list
+
+        for bear in self.bears:  # iterates over bears
+            if bear.hunger_score >= 0:  # if bear's hunger score is good
+                alive_bears.append(bear)  # they stay alive
+
+        self.bears = alive_bears  # only alive bears make it
+
         return None
 
     def repopulate_fish(self):
         return None
 
     def repopulate_bears(self):
+
+        new_bears_amt = int(len(self.bears) / 2)
+
         return None
 
     def view_river(self):
