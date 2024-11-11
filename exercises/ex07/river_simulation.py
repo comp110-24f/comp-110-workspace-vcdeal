@@ -1,4 +1,6 @@
-"""Simulating river"""
+"""Simulating river."""
+
+__author__ = "730745012"
 
 from exercises.ex07.river import River
 
