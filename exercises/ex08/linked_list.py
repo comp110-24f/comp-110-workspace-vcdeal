@@ -117,4 +117,4 @@ def scale(head: Node | None, factor: int) -> Node | None:
     else:
         return Node(
             head.value * factor, scale(head.next, factor)
-        )  # return value w next also being mult
+        )  # return value w next also being mul
